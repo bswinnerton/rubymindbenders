@@ -1,4 +1,4 @@
-#2 - Fibonacci
+#1 - Fibonacci
 
 Define a method called `calculate` that takes one parameter as such:
 

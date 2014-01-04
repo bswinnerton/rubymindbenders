@@ -1,4 +1,4 @@
-#1 - FizzBuzz
+#2 - FizzBuzz
 
 _Via [fullstack academy](http://www.fullstackacademy.com/basecamp)_
 
