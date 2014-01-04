@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'rails' # Used for `capture`: http://api.rubyonrails.org/classes/Kernel.html#method-i-capture
+require 'active_support/core_ext/kernel/reporting' # Used for `capture`: http://api.rubyonrails.org/classes/Kernel.html#method-i-capture
 
 describe FizzBuzz do
   before :each do
