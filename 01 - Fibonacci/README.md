@@ -33,5 +33,5 @@ To test your results, run the following commands:
 
 ```
 cd "02 - Fibonacci"
-rspec spec/fizz_buzz.rb
+rspec
 ```

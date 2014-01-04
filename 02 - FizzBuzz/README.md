@@ -36,5 +36,5 @@ To test your results, run the following commands:
 
 ```
 cd "01 - FizzBuzz"
-rspec spec/fizz_buzz_spec.rb
+rspec
 ```
