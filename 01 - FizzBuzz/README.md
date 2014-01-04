@@ -35,6 +35,6 @@ If the function call were `generally_fizzy([2,3], 1, 7)`, the output would be:
 To test your results, run the following commands:
 
 ```
-cd 01 - FizzBuzz
+cd "01 - FizzBuzz"
 rspec spec/fizz_buzz_spec.rb
 ```
