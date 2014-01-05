@@ -2,9 +2,7 @@ require_relative 'fixnum'
 
 class Prime
   def self.calculate(n)
-    # View README.md for instructions
-    # Hint: 
-    #  - Use the prime? method you created in prime.rb
-    #  - You only need to see if the first 1000 numbers are prime
+    primes = (1..1000).inject([]) { |primes, i| primes << i if i.prime?; primes }
+    primes[n-1]
   end
 end

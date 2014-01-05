@@ -1,7 +1,6 @@
 class Fixnum
   def prime?
-    # View README.md for instructions
-    # Hint:
-    #  - Remember that since you'll be calling 5.prime?, 5 would be self inside this method
+    divisors = (1..self).inject([]) { |divisors, i| divisors << i if self % i == 0; divisors }
+    divisors == [1, self]
   end
 end
