@@ -2,7 +2,10 @@ require_relative 'fixnum'
 
 class Prime
   def self.calculate(n)
-    primes = (1..1000).inject([]) { |primes, i| primes << i if i.prime?; primes }
-    primes[n-1]
+    primes = (1..Float::INFINITY).inject([]) do |primes, i|
+      primes << i if i.prime?
+      return primes[n-1] if primes[n-1] == i
+      primes
+    end
   end
 end
