@@ -1,6 +1,6 @@
 class Fixnum
   def prime?
-    divisors = (1..self).inject([]) { |divisors, i| divisors << i if self % i == 0; divisors }
-    divisors == [1, self]
+		2.upto(Math.sqrt(self).to_i) { |n| return false if self % n == 0 }
+		self == 1 ? false : true
   end
 end
