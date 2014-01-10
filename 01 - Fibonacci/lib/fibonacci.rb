@@ -1,21 +1,6 @@
 class Fibonacci
-
-  # standard recursive solution - wildly inefficient,
-  # obscenely slow for n above 40
-  #
-  # def self.calculate(n)
-  #   return n if [0,1].include? n
-  #   calculate(n - 1) + calculate(n - 2)
-  # end
-
-  # tail-recursive solution - way faster, 
-  # no repeated computations
-  #
-  def self.calc_helper(n, prev, sum)
-  	n < 2 ? sum : calc_helper(n-1, sum, sum + prev)
-  end
-
-  def self.calculate(n)
-  	calc_helper(n, 0, 1)
+  # tail recursive
+  def self.calculate(n, previous_sum = 0, current_sum = 1)
+    n < 2 ? current_sum : calculate(n - 1, current_sum, current_sum + previous_sum)
   end
 end
