@@ -19,7 +19,3 @@ class Fibonacci
   	calc_helper(n, 0, 1)
   end
 end
-
-1.upto(15) do |n|
-	puts Fibonacci.calculate(n)
-end
