@@ -1,6 +1,6 @@
 class Fibonacci
-  def self.calculate(n)
-    return n if [0,1].include? n
-    calculate(n - 1) + calculate(n - 2)
+  # tail recursive
+  def self.calculate(n, previous_sum = 0, current_sum = 1)
+    n < 2 ? current_sum : calculate(n - 1, current_sum, current_sum + previous_sum)
   end
 end
