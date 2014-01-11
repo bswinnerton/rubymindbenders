@@ -1,7 +1,8 @@
 class Array
   def spiral
-    # View README.md for instructions
-    # Hint:
-    #  - Remember that since you'll be calling matrix.spiral, matrix would be self inside this method
+    array = []
+    array << self.shift
+    array << self.transpose.reverse.spiral unless self.empty?
+    array.flatten
   end
 end
