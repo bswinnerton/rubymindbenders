@@ -9,15 +9,25 @@ class Image
     @pixels.each_slice(@width).map { |pixel| pixel }
   end
 
-  def flood_fill(x, y, post_color, pre_color)
-    # View README.md for instructions
+  def flood_fill(x, y, post_color, pre_color = nil)
+    pre_color ||= @pixels[pixel_index(x, y)]
+    index = pixel_index(x, y)
+
+    return if x < 0 or x > @width or y < 0 or y > @height
+    return if @pixels[index] != pre_color
+
+    if @pixels[index] != post_color
+      @pixels[index] = post_color
+      flood_fill(x+1, y, post_color, pre_color)
+      flood_fill(x-1, y, post_color, pre_color)
+      flood_fill(x, y+1, post_color, pre_color)
+      flood_fill(x, y-1, post_color, pre_color)
+    end
   end
 
   private
 
   def pixel_index(x, y)
-    # You'll want to use this method to look up the index of a pixel on an Image.
-    # Hint:
-    #  - This should return an index based on the width and height
+    ((y - 1) * @width + x) - 1
   end
 end
